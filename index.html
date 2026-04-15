@@ -350,41 +350,573 @@
       data-n-p=""
     />
     <noscript data-n-css=""></noscript>
+    <link
+      rel="preload"
+      as="script"
+      href="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/polyfills-42372ed130431b0a.js"
+    />
+    <link
+      rel="preload"
+      as="script"
+      href="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/webpack-0a509ada360be442.js"
+    />
+    <link
+      rel="preload"
+      as="script"
+      href="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/main-48b25064a0adcfd2.js"
+    />
+    <link
+      rel="preload"
+      as="script"
+      href="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/commons-1923f08ffd9dc8bd.js"
+    />
+    <link
+      rel="preload"
+      as="script"
+      href="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/pages/_app-d52ad26a60e65ea4.js"
+    />
+    <link
+      rel="preload"
+      as="script"
+      href="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/pages/go/%5Bid%5D-8acf8e78941976f7.js"
+    />
+    <link
+      rel="preload"
+      as="script"
+      href="https://ssr-releases-cdn.paperlesspost.com/_next/static/042936d/_buildManifest.js"
+    />
+    <link
+      rel="preload"
+      as="script"
+      href="https://ssr-releases-cdn.paperlesspost.com/_next/static/042936d/_ssgManifest.js"
+    />
     <script
-      defer=""
-      nomodule=""
-      src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/polyfills-42372ed130431b0a.js"
+      type="application/x-pp-blocked-script"
+      data-pp-src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/polyfills-42372ed130431b0a.js"
+      data-pp-nomodule=""
     ></script>
     <script
-      src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/webpack-0a509ada360be442.js"
-      defer=""
+      type="application/x-pp-blocked-script"
+      data-pp-src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/webpack-0a509ada360be442.js"
     ></script>
     <script
-      src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/main-48b25064a0adcfd2.js"
-      defer=""
+      type="application/x-pp-blocked-script"
+      data-pp-src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/main-48b25064a0adcfd2.js"
     ></script>
     <script
-      src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/commons-1923f08ffd9dc8bd.js"
-      defer=""
+      type="application/x-pp-blocked-script"
+      data-pp-src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/commons-1923f08ffd9dc8bd.js"
     ></script>
     <script
-      src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/pages/_app-d52ad26a60e65ea4.js"
-      defer=""
+      type="application/x-pp-blocked-script"
+      data-pp-src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/pages/_app-d52ad26a60e65ea4.js"
     ></script>
     <script
-      src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/pages/go/%5Bid%5D-8acf8e78941976f7.js"
-      defer=""
+      type="application/x-pp-blocked-script"
+      data-pp-src="https://ssr-releases-cdn.paperlesspost.com/_next/static/chunks/pages/go/%5Bid%5D-8acf8e78941976f7.js"
     ></script>
     <script
-      src="https://ssr-releases-cdn.paperlesspost.com/_next/static/042936d/_buildManifest.js"
-      defer=""
+      type="application/x-pp-blocked-script"
+      data-pp-src="https://ssr-releases-cdn.paperlesspost.com/_next/static/042936d/_buildManifest.js"
     ></script>
     <script
-      src="https://ssr-releases-cdn.paperlesspost.com/_next/static/042936d/_ssgManifest.js"
-      defer=""
+      type="application/x-pp-blocked-script"
+      data-pp-src="https://ssr-releases-cdn.paperlesspost.com/_next/static/042936d/_ssgManifest.js"
     ></script>
   </head>
-  <body>
+  <body class="pp-intro-active">
+    <style id="pp-hello-intro-style">
+      body.pp-intro-active {
+        overflow: hidden;
+      }
+
+      #__next {
+        transition:
+          opacity 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 1400ms cubic-bezier(0.16, 1, 0.3, 1),
+          filter 1100ms cubic-bezier(0.2, 0.9, 0.2, 1);
+      }
+
+      body.pp-intro-active #__next {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.015);
+        filter: blur(22px);
+      }
+
+      body.pp-intro-leaving #__next,
+      body.pp-intro-complete #__next {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        filter: blur(0);
+      }
+
+      #pp-hello-intro {
+        --pp-intro-bg: #020202;
+        --pp-intro-fg: #f5f5f7;
+        --pp-intro-fg-soft: rgba(245, 245, 247, 0.7);
+        --pp-intro-glow-a: rgba(84, 169, 255, 0.18);
+        --pp-intro-glow-b: rgba(255, 255, 255, 0.1);
+        --pp-intro-shadow: rgba(0, 0, 0, 0.45);
+        position: fixed;
+        inset: 0;
+        z-index: 2147483647;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.08), transparent 24%),
+          radial-gradient(circle at 20% 25%, var(--pp-intro-glow-a), transparent 32%),
+          radial-gradient(circle at 80% 70%, var(--pp-intro-glow-b), transparent 28%),
+          linear-gradient(180deg, #080808 0%, var(--pp-intro-bg) 40%, #000000 100%);
+        color: var(--pp-intro-fg);
+        font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+        transition:
+          opacity 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 1400ms cubic-bezier(0.16, 1, 0.3, 1),
+          filter 1100ms cubic-bezier(0.2, 0.9, 0.2, 1);
+      }
+
+      #pp-hello-intro::before,
+      #pp-hello-intro::after {
+        content: "";
+        position: absolute;
+        inset: -20%;
+        pointer-events: none;
+      }
+
+      #pp-hello-intro::before {
+        background:
+          radial-gradient(circle at 32% 28%, rgba(112, 196, 255, 0.2), transparent 20%),
+          radial-gradient(circle at 72% 62%, rgba(255, 255, 255, 0.08), transparent 18%);
+        filter: blur(70px);
+        animation: pp-intro-ambience-drift 16s ease-in-out infinite alternate;
+      }
+
+      #pp-hello-intro::after {
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.04)),
+          radial-gradient(circle at center, transparent 44%, rgba(0, 0, 0, 0.48) 100%);
+        opacity: 0.9;
+      }
+
+      body.pp-intro-leaving #pp-hello-intro {
+        opacity: 0;
+        filter: blur(14px);
+        transform: scale(1.018);
+        pointer-events: none;
+      }
+
+      body.pp-intro-complete #pp-hello-intro {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .pp-hello-intro__screen {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 6vh 5vw;
+        isolation: isolate;
+      }
+
+      .pp-hello-intro__sequence {
+        position: relative;
+        width: min(92vw, 1040px);
+        min-height: min(44vh, 420px);
+      }
+
+      .pp-hello-intro__sequence::before {
+        content: "";
+        position: absolute;
+        inset: 14% 8%;
+        border-radius: 999px;
+        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 68%);
+        filter: blur(40px);
+        opacity: 0.55;
+        transform: scale(1.08);
+        z-index: -1;
+      }
+
+      .pp-hello-intro__phrase {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        align-content: center;
+        gap: 0.14em;
+        padding: 0 3vw;
+        text-align: center;
+        opacity: 0;
+        transform: translate3d(0, 22px, 0) scale(0.92);
+        filter: blur(18px);
+        pointer-events: none;
+      }
+
+      .pp-hello-intro__phrase.is-active {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+        filter: blur(0);
+        transition:
+          opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 1400ms cubic-bezier(0.16, 1, 0.3, 1),
+          filter 1000ms cubic-bezier(0.2, 0.9, 0.2, 1);
+      }
+
+      .pp-hello-intro__phrase.is-exit {
+        opacity: 0;
+        transform: translate3d(0, -18px, 0) scale(1.05);
+        filter: blur(16px);
+        transition:
+          opacity 780ms cubic-bezier(0.4, 0, 1, 1),
+          transform 780ms cubic-bezier(0.4, 0, 1, 1),
+          filter 780ms cubic-bezier(0.4, 0, 1, 1);
+      }
+
+      .pp-hello-intro__line {
+        display: block;
+        line-height: 0.96;
+        letter-spacing: -0.055em;
+        text-wrap: balance;
+        text-shadow: 0 14px 35px var(--pp-intro-shadow);
+      }
+
+      .pp-hello-intro__phrase--hero .pp-hello-intro__line {
+        font-size: clamp(5rem, 16vw, 10rem);
+        font-weight: 600;
+      }
+
+      .pp-hello-intro__phrase--soft .pp-hello-intro__line {
+        font-size: clamp(2.6rem, 8vw, 5.4rem);
+        font-weight: 500;
+        color: var(--pp-intro-fg-soft);
+      }
+
+      .pp-hello-intro__phrase--strong .pp-hello-intro__line {
+        font-size: clamp(3rem, 9vw, 6rem);
+        font-weight: 580;
+      }
+
+      .pp-hello-intro__phrase--final {
+        gap: 0.04em;
+      }
+
+      .pp-hello-intro__phrase--final .pp-hello-intro__line {
+        font-size: clamp(2.7rem, 8vw, 5.5rem);
+        font-weight: 520;
+      }
+
+      .pp-hello-intro__phrase--final .pp-hello-intro__line:last-child {
+        color: #ffffff;
+        font-weight: 630;
+      }
+
+      .pp-hello-intro__char {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(0.62em) scale(0.94);
+        filter: blur(10px);
+        will-change: transform, opacity, filter;
+        transition:
+          opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 1100ms cubic-bezier(0.16, 1, 0.3, 1),
+          filter 900ms cubic-bezier(0.2, 0.9, 0.2, 1);
+        transition-delay: 0ms;
+      }
+
+      .pp-hello-intro__phrase.is-active .pp-hello-intro__char {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+        transition-delay: calc(var(--char-index) * 28ms + 90ms);
+      }
+
+      .pp-hello-intro__phrase.is-exit .pp-hello-intro__char {
+        opacity: 0;
+        transform: translateY(-0.38em) scale(1.04);
+        filter: blur(9px);
+        transition-delay: calc(var(--char-reverse-index) * 12ms);
+      }
+
+      @keyframes pp-intro-ambience-drift {
+        from {
+          transform: translate3d(-2%, -1%, 0) scale(1);
+        }
+        to {
+          transform: translate3d(2%, 2%, 0) scale(1.08);
+        }
+      }
+
+      @media (max-width: 720px) {
+        .pp-hello-intro__screen {
+          padding: 7vh 6vw;
+        }
+
+        .pp-hello-intro__sequence {
+          min-height: 34vh;
+        }
+
+        .pp-hello-intro__phrase {
+          padding: 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #pp-hello-intro::before {
+          animation: none;
+        }
+
+        .pp-hello-intro__phrase,
+        .pp-hello-intro__char,
+        .pp-hello-intro__phrase.is-active,
+        .pp-hello-intro__phrase.is-exit,
+        #pp-hello-intro,
+        #__next {
+          transition-duration: 1ms !important;
+          transition-delay: 0ms !important;
+        }
+      }
+    </style>
+    <div id="pp-hello-intro" aria-hidden="true">
+      <div class="pp-hello-intro__screen">
+        <section class="pp-hello-intro__sequence" aria-live="polite">
+          <article class="pp-hello-intro__phrase pp-hello-intro__phrase--hero" data-min-duration="2600">
+            <span class="pp-hello-intro__line">Hello</span>
+          </article>
+          <article class="pp-hello-intro__phrase pp-hello-intro__phrase--soft" data-min-duration="2400">
+            <span class="pp-hello-intro__line">je te souhaite</span>
+          </article>
+          <article class="pp-hello-intro__phrase pp-hello-intro__phrase--strong" data-min-duration="2700">
+            <span class="pp-hello-intro__line">un anniversaire</span>
+          </article>
+          <article class="pp-hello-intro__phrase pp-hello-intro__phrase--soft" data-min-duration="2500">
+            <span class="pp-hello-intro__line">a ma façon</span>
+          </article>
+          <article class="pp-hello-intro__phrase pp-hello-intro__phrase--final" data-min-duration="4200">
+            <span class="pp-hello-intro__line">realisé avec</span>
+            <span class="pp-hello-intro__line">grand miaw</span>
+          </article>
+        </section>
+      </div>
+    </div>
+    <script id="pp-hello-intro-script">
+      (() => {
+        const intro = document.getElementById("pp-hello-intro");
+        const introBody = document.body;
+        const phrases = intro
+          ? [...intro.querySelectorAll(".pp-hello-intro__phrase")]
+          : [];
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const EXIT_DURATION_MS = 820;
+        const CROSSFADE_OFFSET_MS = 170;
+        const START_DELAY_MS = 250;
+        const WAIT_SPEED_MULTIPLIER = 0.5;
+        const INTRO_OUTRO_MS = reducedMotion.matches ? 16 : 1150;
+        const BLOCKED_SCRIPT_SELECTOR =
+          'script[type="application/x-pp-blocked-script"][data-pp-src]';
+        const domReady = new Promise((resolve) => {
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", resolve, { once: true });
+            return;
+          }
+
+          resolve();
+        });
+        let safetyTimerId = 0;
+        let secondExperienceStarted = false;
+
+        const wait = (duration) =>
+          new Promise((resolve) => {
+            window.setTimeout(resolve, duration);
+          });
+
+        const revealPage = () => {
+          window.clearTimeout(safetyTimerId);
+          introBody.classList.remove("pp-intro-active", "pp-intro-leaving");
+          introBody.classList.add("pp-intro-complete");
+          if (intro) {
+            intro.remove();
+          }
+        };
+
+        const startTransitionToPage = () => {
+          introBody.classList.add("pp-intro-leaving");
+        };
+
+        const loadBlockedScript = (blockedScript) =>
+          new Promise((resolve, reject) => {
+            if (
+              blockedScript.hasAttribute("data-pp-nomodule") &&
+              "noModule" in HTMLScriptElement.prototype
+            ) {
+              blockedScript.remove();
+              resolve();
+              return;
+            }
+
+            const script = document.createElement("script");
+            script.src = blockedScript.dataset.ppSrc;
+            script.async = false;
+
+            if (blockedScript.hasAttribute("data-pp-nomodule")) {
+              script.noModule = true;
+            }
+
+            script.onload = () => {
+              resolve();
+            };
+            script.onerror = () => {
+              reject(new Error(`Unable to load ${blockedScript.dataset.ppSrc}`));
+            };
+
+            blockedScript.after(script);
+            blockedScript.remove();
+          });
+
+        const bootSecondExperience = async () => {
+          if (secondExperienceStarted) {
+            return;
+          }
+
+          secondExperienceStarted = true;
+          await domReady;
+
+          const blockedScripts = [
+            ...document.querySelectorAll(BLOCKED_SCRIPT_SELECTOR),
+          ];
+
+          for (const blockedScript of blockedScripts) {
+            await loadBlockedScript(blockedScript);
+          }
+        };
+
+        function getPhraseText(phrase) {
+          return [...phrase.querySelectorAll(".pp-hello-intro__line")]
+            .map((line) => line.textContent.replace(/\s+/g, " ").trim())
+            .join(" ")
+            .trim();
+        }
+
+        function computeReadDuration(phrase) {
+          const minimum = Number(phrase.dataset.minDuration || 2200);
+          const text = phrase.dataset.text || "";
+          const words = text ? text.split(/\s+/).length : 0;
+          const characters = text.length;
+          const estimated = 850 + words * 700 + characters * 22;
+
+          return Math.max(minimum, estimated) * WAIT_SPEED_MULTIPLIER;
+        }
+
+        function splitLineIntoCharacters(line, collector) {
+          const rawText = line.textContent;
+          line.textContent = "";
+
+          for (const character of rawText) {
+            const span = document.createElement("span");
+            span.className = "pp-hello-intro__char";
+            span.textContent = character === " " ? "\u00A0" : character;
+            collector.push(span);
+            line.appendChild(span);
+          }
+        }
+
+        function preparePhrases() {
+          phrases.forEach((phrase) => {
+            const phraseText = getPhraseText(phrase);
+            const characters = [];
+
+            phrase.dataset.text = phraseText;
+            phrase.dataset.displayDuration = String(computeReadDuration(phrase));
+
+            [...phrase.querySelectorAll(".pp-hello-intro__line")].forEach((line) => {
+              splitLineIntoCharacters(line, characters);
+            });
+
+            characters.forEach((character, index) => {
+              character.style.setProperty("--char-index", index);
+              character.style.setProperty(
+                "--char-reverse-index",
+                characters.length - index
+              );
+            });
+          });
+        }
+
+        function showPhrase(phrase) {
+          phrase.classList.remove("is-exit");
+          phrase.classList.add("is-active");
+        }
+
+        function hidePhrase(phrase) {
+          phrase.classList.remove("is-active");
+          phrase.classList.add("is-exit");
+        }
+
+        async function runSequence() {
+          if (!phrases.length) {
+            return;
+          }
+
+          await wait(reducedMotion.matches ? 0 : START_DELAY_MS);
+          showPhrase(phrases[0]);
+
+          for (let index = 0; index < phrases.length; index += 1) {
+            const currentPhrase = phrases[index];
+            const nextPhrase = phrases[index + 1];
+            const displayDuration = reducedMotion.matches
+              ? Number(currentPhrase.dataset.minDuration || 2000) *
+                WAIT_SPEED_MULTIPLIER
+              : Number(currentPhrase.dataset.displayDuration);
+
+            await wait(displayDuration);
+
+            if (!nextPhrase) {
+              return;
+            }
+
+            hidePhrase(currentPhrase);
+            await wait(reducedMotion.matches ? 0 : CROSSFADE_OFFSET_MS);
+            showPhrase(nextPhrase);
+            await wait(
+              reducedMotion.matches ? 0 : EXIT_DURATION_MS - CROSSFADE_OFFSET_MS
+            );
+          }
+        }
+
+        safetyTimerId = window.setTimeout(() => {
+          bootSecondExperience().catch(() => {});
+          revealPage();
+        }, 20000);
+
+        if (!intro || !phrases.length) {
+          bootSecondExperience()
+            .catch(() => {})
+            .finally(revealPage);
+          return;
+        }
+
+        try {
+          preparePhrases();
+          runSequence()
+            .then(async () => {
+              await domReady;
+              const bootPromise = bootSecondExperience();
+              startTransitionToPage();
+              window.setTimeout(revealPage, INTRO_OUTRO_MS);
+              await bootPromise;
+            })
+            .catch(revealPage);
+        } catch (error) {
+          bootSecondExperience().catch(() => {});
+          revealPage();
+        }
+      })();
+    </script>
     <div id="__next">
       <div></div>
       <style data-emotion="pp dkleda-Outer">
