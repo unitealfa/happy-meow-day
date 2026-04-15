@@ -396,6 +396,36 @@
         }
       </style>
       <div class="pp-dkleda-Outer evw6nny0"></div>
+      <style id="hide-custom-header-logo">
+        [data-testid="custom-header-logo"],
+        .pp-1l6t02a-HeaderWrapper,
+        .pp-8vi447-BorderWrapper {
+          display: none !important;
+          visibility: hidden !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
+        }
+      </style>
+      <script id="remove-custom-header-logo">
+        (() => {
+          const selector = '[data-testid="custom-header-logo"]';
+
+          const removeHeaderLogo = () => {
+            document.querySelectorAll(selector).forEach((node) => node.remove());
+          };
+
+          removeHeaderLogo();
+
+          const observer = new MutationObserver(() => {
+            removeHeaderLogo();
+          });
+
+          observer.observe(document.documentElement, {
+            childList: true,
+            subtree: true,
+          });
+        })();
+      </script>
       <style data-emotion="pp-global m1tknn">
         @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700");
         * {
@@ -14616,7 +14646,6 @@
                 "rsvpPreviewModal": false,
                 "rsvpPreviewModalOption": "",
                 "isQuestionsPreviewModal": false,
-                "isDraftHeaderLogoMode": false,
                 "adminEditorPage": null,
                 "activePreview": "desktop",
                 "selectedBlockId": null,
@@ -14651,7 +14680,6 @@
                   "isActive": false,
                   "isCancelled": false
                 },
-                "isCustomHeaderAnimationActive": false,
                 "allowPlaceholderData": true,
                 "showMenuItemTooltip": null,
                 "hasAddedBlock": false,
@@ -14717,13 +14745,6 @@
                       "mobile": "edit-event-settings-tool",
                       "desktop": null
                     },
-                    "stage": "showCardFront",
-                    "isPersistent": true
-                  },
-                  "header-logo-state": {
-                    "menu": { "mobile": "page-menu" },
-                    "tool": "header-logo-tool",
-                    "modal": null,
                     "stage": "showCardFront",
                     "isPersistent": true
                   },
@@ -14819,13 +14840,6 @@
                     "isTransient": true
                   },
                   "feature-bundle-enrollment-state-blocks": {
-                    "menu": null,
-                    "tool": null,
-                    "modal": "feature_bundle_enrollment",
-                    "stage": null,
-                    "isTransient": true
-                  },
-                  "feature-bundle-enrollment-state-header-block": {
                     "menu": null,
                     "tool": null,
                     "modal": "feature_bundle_enrollment",
